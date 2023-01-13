@@ -1,0 +1,115 @@
+body{
+margin: 0;
+padding:0;
+
+/* Unrealted to css grid properties  */
+background-color: antiquewhite;
+}
+
+/* The name of our div */
+.Cont{
+
+    /* The width of our container */
+    width:100%;
+
+    /* The min hight of our container  */
+    min-height: 100vh;
+    display:grid;
+
+    /* Devding the area up into grids */
+    grid-template-areas:    'header header header'
+                            'aside main main'
+                            'footer footer footer';
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+
+/* Changes the properties of our header */
+header{
+    grid-area: header;
+    background-color: darkgoldenrod;
+}
+
+/* Changes the prperties of our aside */
+aside{
+    grid-area: aside;
+    background-color: darkcyan;
+}
+
+/* Changes the prperties of our Main */
+main{
+    grid-area: main;
+    display: grid;
+    background-color: grey;
+    grid-template-areas: 'section_a section_b'
+                         'section_a section_c'
+                        'section_d section_e';
+    grid-gap: 10px;
+}
+
+.section_a{
+    grid-area:section_a;
+    background-color: blue;
+}
+
+.section_b{
+    grid-area:section_b;
+    background-color: greenyellow;
+}
+
+.section_c{
+    grid-area:section_c;
+    background-color: blueviolet;
+}
+
+.section_d{
+    grid-area:section_d;
+    background-color: rgb(86, 46, 122);
+}
+.section_e{
+    grid-area:section_e;
+    background-color: rgba(137, 43, 226, 0);
+}
+.section_f{
+    grid-area:section_f;
+    background-color: rgb(141, 226, 43);
+}
+.section_g{
+    grid-area:section_g;
+    background-color: rgb(43, 226, 217);
+}
+.section_h{
+    grid-area:section_h;
+    background-color: rgb(226, 43, 43);
+}
+.section_i{
+    grid-area:section_i;
+    background-color: rgb(226, 101, 43);
+}
+.section_j{
+    grid-area:section_j;
+    background-color: rgb(43, 226, 211);
+}
+.section_k{
+    grid-area:section_k;
+    background-color: rgb(226, 43, 180);
+}
+.section_l{
+    grid-area:section_l;
+    background-color: rgb(208, 226, 43);
+}
+
+
+/* Changes the prperties of our Footer */
+footer{
+    grid-area: footer;
+    background-color: honeydew;
+}
+
+@media screen and (max-width:600px) {
+
+    header{
+        background-color: black;
+    }
+}
